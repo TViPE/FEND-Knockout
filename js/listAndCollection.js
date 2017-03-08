@@ -19,6 +19,11 @@ function ReservationsViewModel() {
 		new SeatReservation("Bert", self.availableMeals[0]),
 		new SeatReservation("Tri", self.availableMeals[1])
 	]);
+
+	// addSeat function 
+	self.addSeat = function() {
+		self.seats.push(new SeatReservation("New Person", self.availableMeals[0]));
+	}
 }
 
 //Activate Knockout.js
