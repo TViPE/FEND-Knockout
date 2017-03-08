@@ -1,6 +1,10 @@
 function AppViewModel() {
-	this.firstName = "Bert";
-	this.lastName = "Berlington";
+	this.firstName = "Tri";
+	this.lastName = "Vi";
+	//Define a computed value
+	this.fullName = ko.computed(function() {
+		return  this.firstName + " " + this.lastName;
+	}, this);
 }
 
 //Activate Knockout.js
