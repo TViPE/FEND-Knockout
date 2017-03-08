@@ -9,6 +9,10 @@ function AppViewModel() {
 		var currentVal =  this.lastName();
 		this.lastName(currentVal.toUpperCase());
 	}
+	this.capitalizeFirstName = function() {
+		var currentVal = this.firstName();
+		this.firstName(currentVal.toUpperCase());
+	}
 }
 
 //Activate Knockout.js
