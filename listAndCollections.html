@@ -1,5 +1,6 @@
 <head></head>
 <body>
+	<h2>Your revervation (<span data-bind="text: seats().length"></span>)</h2>
 	<table>
 		<thead><tr>
 			<th>Passenger Name</th>
@@ -14,11 +15,11 @@
 				<td><a href="#" data-bind="click: $root.removeSeat">Remove</a></td>
 			</tr>
 		</tbody>
-		<button data-bind="click: addSeat">Add Seat</button>
 		<h3 data-bind="visible: totalSurcharge() > 0">
     		Total surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span>
 		</h3>
 	</table>
+	<button data-bind="click: addSeat, enable: seats().length < 5">Add Seat</button>
 	<script type='text/javascript' src='js/knockout-3.4.2.js'></script>
 	<script type="text/javascript" src="js/listAndCollection.js"></script>
 </body>
